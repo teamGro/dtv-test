@@ -1,0 +1,83 @@
+// Global CSS Variables & Less Variables
+:root {
+  // Colors
+  --color-primary: #0088CC;
+  --color-primary-hover: #0077B5;
+  --color-primary-active: #00669E;
+  --color-primary-light: #E8F4FB;
+  --color-bg: #F4F6F9;
+  --color-surface: #FFFFFF;
+  --color-surface-hover: #F8FAFC;
+  --color-text: #171E26;
+  --color-text-secondary: #58697A;
+  --color-text-muted: #8E9CA8;
+  --color-border: #E2E8F0;
+  --color-border-light: #EDF2F7;
+  --color-border-focus: #0088CC;
+  --color-error: #E53E3E;
+  --color-error-bg: #FFF5F5;
+  --color-success: #38A169;
+  --color-success-bg: #F0FFF4;
+
+  // Fonts
+  --font-heading: 'Futura PT', -apple-system, BlinkMacSystemFont, sans-serif;
+  --font-body: 'Source Sans 3', -apple-system, BlinkMacSystemFont, sans-serif;
+
+  // Font Sizes
+  --font-size-xs: 12px;
+  --font-size-sm: 14px;
+  --font-size-base: 16px;
+  --font-size-lg: 18px;
+  --font-size-xl: 20px;
+  --font-size-2xl: 24px;
+  --font-size-3xl: 32px;
+  --font-size-4xl: 40px;
+
+  // Line Heights
+  --line-height-tight: 1.25;
+  --line-height-normal: 1.5;
+  --line-height-relaxed: 1.65;
+
+  // Radii
+  --radius-xs: 4px;
+  --radius-sm: 8px;
+  --radius-md: 12px;
+  --radius-lg: 16px;
+  --radius-xl: 24px;
+  --radius-pill: 9999px;
+
+  // Shadows
+  --shadow-sm: 0 1px 3px rgba(15, 23, 42, 0.05);
+  --shadow-card: 0 2px 12px rgba(15, 23, 42, 0.04);
+  --shadow-card-hover: 0 10px 25px rgba(0, 136, 204, 0.1);
+  --shadow-modal: 0 20px 40px rgba(0, 0, 0, 0.12);
+
+  // Spacings
+  --spacing-2xs: 4px;
+  --spacing-xs: 8px;
+  --spacing-sm: 12px;
+  --spacing-md: 16px;
+  --spacing-lg: 24px;
+  --spacing-xl: 32px;
+  --spacing-2xl: 48px;
+  --spacing-3xl: 64px;
+
+  // Layout
+  --container-max-width: 1280px;
+  --header-height: 72px;
+  --transition-fast: 0.15s ease;
+  --transition-normal: 0.25s ease;
+}
+
+// Less shortcuts mapping to CSS vars
+@color-primary: var(--color-primary);
+@color-primary-hover: var(--color-primary-hover);
+@color-bg: var(--color-bg);
+@color-surface: var(--color-surface);
+@color-text: var(--color-text);
+@color-text-secondary: var(--color-text-secondary);
+@color-text-muted: var(--color-text-muted);
+@color-border: var(--color-border);
+@color-error: var(--color-error);
+@font-heading: var(--font-heading);
+@font-body: var(--font-body);
