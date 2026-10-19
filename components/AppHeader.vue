@@ -16,11 +16,9 @@
           v-if="showCreateButton"
           to="/materials/create"
           class="btn-create"
+          aria-label="Создать материал"
+          title="Создать материал"
         >
-          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
-            <line x1="12" y1="5" x2="12" y2="19"></line>
-            <line x1="5" y1="12" x2="19" y2="12"></line>
-          </svg>
           <span class="btn-create__text">Создать материал</span>
         </NuxtLink>
       </div>
@@ -81,30 +79,55 @@ const showCreateButton = computed(() => {
 .btn-create {
   display: inline-flex;
   align-items: center;
-  gap: 8px;
-  background-color: var(--color-primary);
-  color: #ffffff;
+  justify-content: center;
+  background-color: var(--color-primary-light);
+  color: var(--color-primary);
   padding: 10px 20px;
-  border-radius: var(--radius-sm);
+  border-radius: 10px;
   font-family: var(--font-body);
   font-weight: 600;
-  font-size: var(--font-size-sm);
-  transition: background-color var(--transition-fast), transform var(--transition-fast), box-shadow var(--transition-fast);
-  box-shadow: 0 2px 6px rgba(0, 136, 204, 0.25);
+  font-size: 14px;
+  line-height: 20px;
+  text-decoration: none;
+  border: none;
+  cursor: pointer;
+  user-select: none;
+  transition: background-color var(--transition-fast), color var(--transition-fast);
+
+  &__icon {
+    display: none;
+  }
+
+  &__text {
+    display: inline;
+    white-space: nowrap;
+  }
 
   &:hover {
-    background-color: var(--color-primary-hover);
-    box-shadow: 0 4px 12px rgba(0, 136, 204, 0.35);
+    background-color: var(--color-primary-light-hover);
+    color: var(--color-primary);
   }
 
   &:active {
-    background-color: var(--color-primary-active);
-    transform: translateY(1px);
+    background-color: var(--color-primary-light-active);
+    color: var(--color-primary);
   }
 
-  @media (max-width: 480px) {
-    padding: 8px 14px;
-    font-size: 13px;
+  @media (max-width: 640px) {
+    width: 40px;
+    height: 40px;
+    padding: 0;
+    border-radius: 10px;
+
+    &__icon {
+      display: block;
+      width: 20px;
+      height: 20px;
+    }
+
+    &__text {
+      display: none;
+    }
   }
 }
 </style>

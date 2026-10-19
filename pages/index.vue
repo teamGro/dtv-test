@@ -157,16 +157,23 @@ await useAsyncData('materials', () => materialsStore.fetchMaterials())
 
 .btn-create-first {
   display: inline-block;
-  background-color: var(--color-primary);
-  color: #ffffff;
-  padding: 12px 28px;
-  border-radius: var(--radius-sm);
+  background-color: var(--color-primary-light);
+  color: var(--color-primary);
+  padding: 10px 24px;
+  border-radius: 10px;
   font-weight: 600;
-  transition: background-color var(--transition-fast), transform var(--transition-fast);
+  font-size: 14px;
+  text-decoration: none;
+  transition: background-color var(--transition-fast), color var(--transition-fast);
 
   &:hover {
-    background-color: var(--color-primary-hover);
-    transform: translateY(-1px);
+    background-color: var(--color-primary-light-hover);
+    color: var(--color-primary);
+  }
+
+  &:active {
+    background-color: var(--color-primary-light-active);
+    color: var(--color-primary);
   }
 }
 
